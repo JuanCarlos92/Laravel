@@ -15,6 +15,8 @@
             <li><a href={{route('2DAW.modulo', ['modulo' => 'Lenguaje de Marcas'])}}>Modulo</a></li>
             <li><a href={{route('2DAW.alumno', ['modulo' => 'Programacion', 'alumno' => 'Juan', 'nota' => 9]) }}>Alumno con nota</a></li>
             <li><a href={{route('2DAW.alumno', ['modulo' => 'Lenguaje de Marcas', 'alumno' => 'Juan']) }}>Alumno sin nota</a></li>
+            <li><a href={{route('2DAW.libros')}}>Libros</a></li>
+
         </ul>
     </nav>
     @yield('contenido')
