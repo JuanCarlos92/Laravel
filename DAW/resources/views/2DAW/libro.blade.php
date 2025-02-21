@@ -12,4 +12,12 @@
     <p>Editorial: {{$libro->editorial}}</p>
     <p>ISBN: {{$libro->isbn}}</p>
     <p>Precio: {{$libro->pvp}}€</p>
+
+    <a href="{{route('editar', $libro)}}">Editar Libro</a>
+
+    <form action="{{route('eliminar', $libro)}}" method="POST">
+        @method('delete')
+        @csrf
+        <button type="submit">Eliminar Libro</button>
+    </form>
 @endsection

@@ -10,6 +10,9 @@ Route::get('2DAW', [DawController::class, 'index'])->name('2DAW');
 Route::get('2DAW/profesor', [DawController::class, 'profesor'])->name('2DAW.profesor');
 Route::get('2DAW/libros', [LibrosController::class,'index']) -> name('2DAW.libros');
 Route::get('2DAW/libros/{libro}', [LibrosController::class, 'libro'])->name('libro');
+Route::get("2DAW/libros/{libro}/editar", [LibrosController::class, 'editar'])->name('editar');
+Route::put('2DAW/libros/{libro}',[LibrosController::class,'actualizar'])->name('actualizar');
+Route::delete("2DAW/libros/{libro}", [LibrosController::class, 'eliminar'])->name('eliminar');
 Route::get('2DAW/{modulo}', [DawController::class, 'modulo'])->name('2DAW.modulo');
 Route::get('2DAW/{modulo}/{alumno}/{nota?}', [DawController::class, 'alumno'])->name('2DAW.alumno');
 
